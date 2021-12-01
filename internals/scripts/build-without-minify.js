@@ -21,10 +21,10 @@ require.cache[require.resolve('react-scripts/config/webpack.config')] = {
     const webpackConfig = configFactory(webpackEnv)
     webpackConfig.optimization.minimize = false
     return webpackConfig
-  },
+  }
 }
 
-function requireIgnoringCache(moduleName) {
+function requireIgnoringCache (moduleName) {
   const fullPath = require.resolve(moduleName)
   const overridenModule = require.cache[fullPath]
   delete require.cache[fullPath]
